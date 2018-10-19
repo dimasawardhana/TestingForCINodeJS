@@ -19,3 +19,11 @@ app.get('/user',(req,res)=>{
 				 }}
 	res.json(obj);
 });
+app.get('/user/1',(req,res)=>{
+	let obj = {
+		response : 'ok',
+		data :{
+			test: 'travis'
+		}
+	}
+})
