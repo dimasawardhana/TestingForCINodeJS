@@ -7,41 +7,41 @@ let model = require('../model/model.js')();
 let url = 'http://9a335c32.ngrok.io/';
 
 
-	describe('Array', ()=>{
-	  describe('#indexOf()',()=>{
-	    it('should return -1 when the value is not present', ()=>{
-		assert.equal([1,2,3].indexOf(4),-1);
-	    });
-	  });
-	});
+describe('Array', ()=>{
+  describe('#indexOf()',()=>{
+    it('should return -1 when the value is not present', ()=>{
+	assert.equal([1,2,3].indexOf(4),-1);
+    });
+  });
+});
 
-	describe('API / ', ()=>{
-		it('should return object with all true',async()=>{
-			
-			let res = await request.get(url);
-			let response = JSON.parse(res.res.body);
-			
-			expect(response).to.have.property("response");
-			expect(response).to.have.property("statusCode");
-			expect(response.response).to.include('o');
-			}
-		);
-	});
+describe('API / ', ()=>{
+	it('should return object with all true',async()=>{
+		
+		let res = await request.get(url);
+		let response = JSON.parse(res.res.body);
+		
+		expect(response).to.have.property("response");
+		expect(response).to.have.property("statusCode");
+		expect(response.response).to.include('o');
+		}
+	);
+});
 
-	describe('API /user', ()=>{
-		it('should have username string , id integer and status with boolean',async	()=>{
-			let res = await request.get(url+'user')
-			console.log(res.res.body);
-			let response = JSON.parse(res.res.body);	
-				
-				expect(model.getId(response.data)).to.be.a('number');
-				expect(model.getUsername(response.data)).to.be.a('string');
-				expect(model.getName(response.data)).to.be.a('string');
-				expect(model.getStatus(response.data)).to.be.a('boolean');
-				expect(model.getName(response.data)).to.include('dimas');		
-			}
-		);
-	});	
+describe('API /user', ()=>{
+	it('should have username string , id integer and status with boolean',async	()=>{
+		let res = await request.get(url+'user')
+		console.log(res.res.body);
+		let response = JSON.parse(res.res.body);	
+			
+			expect(model.getId(response.data)).to.be.a('number');
+			expect(model.getUsername(response.data)).to.be.a('string');
+			expect(model.getName(response.data)).to.be.a('string');
+			expect(model.getStatus(response.data)).to.be.a('boolean');
+			expect(model.getName(response.data)).to.include('dimas');		
+		}
+	);
+});	
 
 	
 
