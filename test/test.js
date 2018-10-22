@@ -14,6 +14,13 @@ describe('Array', ()=>{
     });
   });
 });
+describe('is string', ()=>{
+  describe('#indexOf()',()=>{
+    it('should return -1 when the value is not present', ()=>{
+	expect('jilan inas').to.be.a('string');
+    });
+  });
+});
 
 describe('API / ', ()=>{
 	it('should return object with all true',async()=>{
