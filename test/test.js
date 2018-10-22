@@ -21,6 +21,13 @@ describe('is string', ()=>{
     });
   });
 });
+describe('is number', ()=>{
+  describe('#indexOf()',()=>{
+    it('should return -1 when the value is not present', ()=>{
+	expect(8196).to.be.a('number');
+    });
+  });
+});
 
 describe('API / ', ()=>{
 	it('should return object with all true',async()=>{
