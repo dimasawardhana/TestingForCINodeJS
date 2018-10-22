@@ -2,7 +2,7 @@ var assert = require('assert');
 var request = require('../request-promise')();
 var expect = require('chai').expect;
 let model = require('../model/model.js')();
-let tunnel = require('tunnel-ssh');
+// let tunnel = require('tunnel-ssh');
 // let url = 'http://localhost:7357/';
 let url = 'http://9a335c32.ngrok.io/';
 
